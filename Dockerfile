@@ -6,7 +6,7 @@ COPY . .
 ARG APP_MOUNT_URI
 ARG API_URI
 ARG STATIC_URL
-ENV API_URI ${API_URI:-https://ecom.duckdns.org/graphql/}
+ENV API_URI ${API_URI:-http://10.0.0.9/graphql/}
 ENV APP_MOUNT_URI ${APP_MOUNT_URI:-/dashboard/}
 ENV STATIC_URL ${STATIC_URL:-/dashboard/}
 RUN STATIC_URL=${STATIC_URL} API_URI=${API_URI} APP_MOUNT_URI=${APP_MOUNT_URI} npm run build
